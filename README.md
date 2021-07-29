@@ -9,7 +9,7 @@
 `npm run dev` to run program in dev environment ( You should install nodemon first )
 
 ## Authors
-[Mostafa Mojtahedi] (https://github.com/mostafa1647)
+[Mostafa Mojtahedi](https://github.com/mostafa1647)
 
 
-[Amir Hossein Ahmadi] (https://github.com/amir7d0)
+[Amir Hossein Ahmadi](https://github.com/amir7d0)
