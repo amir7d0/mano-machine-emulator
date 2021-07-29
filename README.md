@@ -6,7 +6,7 @@
 
 `npm start` to start the program
 
-`npm run dev` to run program in dev environment ( You should install nodemin first )
+`npm run dev` to run program in dev environment ( You should install nodemon first )
 
 ## Authors
 [Mostafa Mojtahedi] (https://github.com/mostafa1647)
