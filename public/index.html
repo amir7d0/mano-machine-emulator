@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Computer</title>
+    <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<section id="getInput" class="input-field ">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form method="post">
+                    <textarea name="inputCode" id="inputCode" placeholder="input code here"></textarea>
+                    <button type="submit">Run</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="computerDetails" class="computer d-none" >
+    <div class="row">
+        <div class="col-4">
+            <div class="wrapper">
+                <div class="program-table">
+                    <div class="table-wrapper">
+                        <table id="program">
+                            <thead>
+                            <tr>
+                                <th>Program</th>
+                            </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="address-table">
+                    <div class="table-wrapper">
+                        <table id="address">
+                            <caption>Address Table</caption>
+                            <thead>
+                            <tr>
+                                <th>Variable</th>
+                                <th>Address (hex)</th>
+                            </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-8">
+            <div class="wrapper">
+                <div class="tab-header">
+                    <ul class="tabs">
+                        <li class="active" data-target="registersContent" onclick="tabFunc(this)">Registers</li>
+                        <li data-target="memoryContent" onClick="tabFunc(this)">Memory</li>
+                    </ul>
+                </div>
+                <div class="tab-content-wrapper">
+                    <div class="tab-content" id="registersContent">
+                        <div class="registers">
+                            <ul class="registers-list">
+                                <li class="register" id="ar">
+                                    <label for="arRegister">AR : </label>
+                                    <input type="text" value="0" name="ar" id="arRegister" disabled>
+                                </li>
+                                <li class="register" id="pc">
+                                    <label for="pcRegister">PC : </label>
+                                    <input type="text" value="0" name="pc" id="pcRegister" disabled>
+                                </li>
+                                <li class="register" id="dr">
+                                    <label for="drRegister">DR : </label>
+                                    <input type="text" value="0" name="dr" id="drRegister" disabled>
+                                </li>
+                                <li class="register" id="ac">
+                                    <label for="acRegister">AC : </label>
+                                    <input type="text" value="0" name="ac" id="acRegister" disabled>
+                                </li>
+                                <li class="register" id="ir">
+                                    <label for="irRegister">IR : </label>
+                                    <input type="text" value="0" name="ir" id="irRegister" disabled>
+                                </li>
+                                <li class="register" id="tr">
+                                    <label for="arRegister">TR : </label>
+                                    <input type="text" value="0" name="tr" id="trRegister" disabled>
+                                </li>
+                                <li class="register" id="inpr">
+                                    <label for="inprRegister">INPR : </label>
+                                    <input type="text" value="0" name="inpr" id="inprRegister" disabled>
+                                </li>
+                                <li class="register" id="outr">
+                                    <label for="outrRegister">OUTR : </label>
+                                    <input type="text" value="0" name="outr" id="outrRegister" disabled>
+                                </li>
+                                <li class="register" id="sc">
+                                    <label for="scRegister">SC : </label>
+                                    <input type="text" value="0" name="sc" id="scRegister" disabled>
+                                </li>
+                                <li class="register" id="e">
+                                    <label for="eRegister">E : </label>
+                                    <input type="text" value="0" name="e" id="eRegister" disabled>
+                                </li>
+                                <li class="register" id="s">
+                                    <label for="sRegister">S : </label>
+                                    <input type="text" value="0" name="s" id="sRegister" disabled>
+                                </li>
+                                <li class="register" id="r">
+                                    <label for="rRegister">r : </label>
+                                    <input type="text" value="0" name="r" id="rRegister" disabled>
+                                </li>
+                                <li class="register" id="ien">
+                                    <label for="ienRegister">IEN : </label>
+                                    <input type="text" value="0" name="ien" id="ienRegister" disabled>
+                                </li>
+                                <li class="register" id="fgi">
+                                    <label for="fgiRegister">FGI : </label>
+                                    <input type="text" value="0" name="fgi" id="fgiRegister" disabled>
+                                </li>
+                                <li class="register" id="fgo">
+                                    <label for="fgoRegister">FGO : </label>
+                                    <input type="text" value="0" name="fgo" id="fgoRegister" disabled>
+                                </li>
+                                <li class="register" id="text">
+                                    <label for="textRegister">Text : </label>
+                                    <input type="text" value="" name="text" id="textRegister" disabled>
+                                </li>
+                            </ul>
+                            <div class="btn-sec">
+                                <button id="prev">Previous</button>
+                                <button id="reset">Reset</button>
+                                <button id="next">Next</button>
+                                <button id="first">First</button>
+                                <button id="last">Last</button>
+                            </div>
+                        </div>
+                        <div class="used-memory">
+                            <div class="table-wrapper">
+                                <table id="usedMem">
+                                    <caption>Program in Memory</caption>
+                                    <thead>
+                                        <tr>
+                                            <th>Index</th>
+                                            <th>Instruction Code (binary)</th>
+                                            <th>Instruction Code (hex)</th>
+                                            <th>Instruction Code</th>
+                                            <th>Comment</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content d-none" id="memoryContent">
+                        <div class="table-wrapper">
+                            <table id="memory">
+                                <caption>Memory</caption>
+                                <thead>
+                                <tr>
+                                    <th>index</th>
+                                    <th>hex</th>
+                                    <th>decimal</th>
+                                </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <p>Design and Developed By Amir Hossein Ahmadi and Mostafa Mojtahedi </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="js/vendor/jquery-3.5.1.min.js"></script>
+<script src="js/vendor/popper.min.js"></script>
+<script src="js/vendor/bootstrap.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

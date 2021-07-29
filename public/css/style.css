@@ -1,0 +1,258 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #fff;
+}
+
+input:focus, textarea:focus, button:focus {
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+}
+
+section.input-field .container form {
+  width: 100%;
+  padding: 10px;
+  margin: 60px auto;
+  text-align: center;
+}
+section.input-field .container form textarea {
+  width: 50%;
+  height: 50vh;
+  margin: 20px auto;
+  display: block;
+  background-color: #e8e8e8;
+  border: 2px solid #7C7C7C;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1em;
+  color: #777777;
+  transition: 0.3s border ease;
+}
+section.input-field .container form textarea:focus, section.input-field .container form textarea:active {
+  border-color: #23425F;
+}
+section.input-field .container form button {
+  text-align: center;
+  padding: 10px 50px;
+  background-color: #0F86C2;
+  border: 2px solid #0F86C2;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: 700;
+  transition: 0.3s all ease;
+}
+section.input-field .container form button:hover {
+  background-color: #23425F;
+  border-color: #23425F;
+}
+
+.disabled {
+  opacity: 0.5;
+}
+
+.table-wrapper {
+  white-space: pre;
+}
+.table-wrapper table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 0 1px #7C7C7C;
+}
+.table-wrapper table caption {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+  caption-side: top;
+}
+.table-wrapper table thead tr {
+  text-align: center;
+}
+.table-wrapper table thead tr th {
+  padding: 10px;
+  background-color: #0F86C2;
+  color: #fff;
+  border-left: 1px solid #7C7C7C;
+  border-right: 1px solid #7C7C7C;
+}
+.table-wrapper table thead tr th:first-child {
+  border-left: none;
+}
+.table-wrapper table thead tr th:last-child {
+  border-right: none;
+}
+.table-wrapper table tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+.table-wrapper table tbody tr:nth-child(even) {
+  background-color: #ddd;
+}
+.table-wrapper table tbody tr:last-child {
+  border-radius: 0 0 5px 5px;
+}
+.table-wrapper table tbody tr:last-child td {
+  border-bottom: none;
+}
+.table-wrapper table tbody tr td {
+  padding: 5px 10px;
+  text-align: center;
+  border: 1px solid #7C7C7C;
+}
+.table-wrapper table tbody tr td:last-child {
+  border-right: none;
+}
+.table-wrapper table tbody tr td:first-child {
+  border-left: none;
+}
+
+section.computer {
+  background-color: #fff;
+}
+section.computer > .row {
+  margin: 0;
+}
+section.computer > .row > div:first-child .table-wrapper {
+  padding: 0 65px;
+}
+section.computer > .row > div:first-child .table-wrapper table#program tbody tr {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding-left: calc(50% - 83px);
+  border-top: 1px solid #7C7C7C;
+}
+section.computer > .row > div:first-child .table-wrapper table#program tbody tr:last-child {
+  border-bottom: none;
+}
+section.computer > .row > div:first-child .table-wrapper table#program tbody tr td {
+  border: none;
+}
+section.computer > .row > div:nth-child(2) .wrapper {
+  padding: 47px 25px;
+}
+section.computer > .row > div:nth-child(2) .wrapper .tab-header ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  border-bottom: 1px solid #7C7C7C;
+}
+section.computer > .row > div:nth-child(2) .wrapper .tab-header ul li {
+  padding: 10px 20px;
+  flex: 0 0 50%;
+  text-align: center;
+  transition: 0.3s all ease;
+}
+section.computer > .row > div:nth-child(2) .wrapper .tab-header ul li:hover, section.computer > .row > div:nth-child(2) .wrapper .tab-header ul li.active {
+  background-color: #0F86C2;
+  color: #fff;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #7C7C7C;
+  border-bottom: none;
+  cursor: pointer;
+}
+section.computer > .row > div:nth-child(2) .wrapper .tab-content-wrapper .registers ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+section.computer > .row > div:nth-child(2) .wrapper .tab-content-wrapper .registers ul li {
+  margin: 10px;
+  flex: 0 0 30%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+section.computer > .row > div:nth-child(2) .wrapper .tab-content-wrapper .registers ul li#text {
+  flex: 0 0 96%;
+}
+section.computer > .row > div:nth-child(2) .wrapper .tab-content-wrapper .registers ul li#text label {
+  width: 50px;
+}
+section.computer > .row > div:nth-child(2) .wrapper .tab-content-wrapper .registers ul li#text input {
+  width: 91%;
+}
+section.computer > .row > div:nth-child(2) .wrapper .tab-content-wrapper .registers ul li label {
+  font-weight: 700;
+  margin: 0;
+}
+section.computer > .row > div:nth-child(2) .wrapper .tab-content-wrapper .registers ul li input[type=text] {
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  border: 2px solid #7C7C7C;
+}
+section.computer > .row > div:nth-child(2) .wrapper .tab-content-wrapper .registers ul li input[type=text]:not(#textRegister) {
+  width: 70%;
+}
+section.computer > .row > div:nth-child(2) .wrapper .tab-content-wrapper .registers .btn-sec {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+section.computer > .row > div:nth-child(2) .wrapper .tab-content-wrapper .registers .btn-sec button {
+  border: 1px solid #0F86C2;
+  background-color: #0F86C2;
+  transition: 0.3s all ease;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 5px 0;
+  width: 150px;
+  color: #fff;
+}
+section.computer > .row > div:nth-child(2) .wrapper .tab-content-wrapper .registers .btn-sec button:hover {
+  background-color: #23425F;
+  border-color: #23425F;
+}
+section.computer > .row > div:nth-child(2) .wrapper .tab-content-wrapper .used-memory .title {
+  font-size: 1.5em;
+  font-weight: 700;
+  text-align: center;
+  color: #000;
+  margin: 0 0 -20px 0;
+  border-top: 1px solid #7C7C7C;
+  padding: 40px 0 0 0;
+}
+section.computer > .row > div:nth-child(2) .wrapper .tab-content-wrapper .used-memory .table-wrapper, section.computer > .row > div:nth-child(2) .wrapper .tab-content-wrapper #memoryContent .table-wrapper {
+  padding: 0 20px;
+}
+
+.indirect::before {
+  content: "I";
+  font-size: 1em;
+  color: #08256a;
+  font-family: cursive;
+  position: relative;
+  left: -30px;
+}
+
+footer {
+  background-color: #ddd;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+footer p {
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=style.css.map */

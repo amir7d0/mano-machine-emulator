@@ -1,0 +1,273 @@
+@import "vars";
+
+// resets
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: sans-serif;
+    background-color: #fff;
+}
+
+input, textarea, button {
+    &:focus {
+        outline: none;
+    }
+}
+ul {
+    list-style-type: none;
+}
+//style
+section.input-field {
+    .container {
+        form {
+            width: 100%;
+            padding: 10px;
+            margin: 60px auto;
+            text-align: center;
+            textarea {
+                width: 50%;
+                height: 50vh;
+                margin: 20px auto;
+                display: block;
+                background-color: #e8e8e8;
+                border: 2px solid $hardGrey;
+                padding: 10px;
+                border-radius: $borderRadius;
+                font-size: 1em;
+                color: $textColor;
+                transition: 0.3s border ease;
+                &:focus, &:active {
+                    border-color: $darkBlue;
+                }
+            }
+            button {
+                text-align: center;
+                padding: 10px 50px;
+                background-color: $skyBlue;
+                border: 2px solid $skyBlue;
+                border-radius: $borderRadius;
+                color: #fff;
+                font-weight: 700;
+                @include transition;
+                &:hover {
+                    background-color: $darkBlue;
+                    border-color: $darkBlue;
+                }
+            }
+        }
+    }
+}
+
+.disabled {
+    opacity: 0.5;
+}
+
+.table-wrapper {
+    white-space: pre;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: $borderRadius;
+        overflow: hidden;
+        box-shadow: 0 0 0 1px $hardGrey;
+        caption {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #000;
+            text-align: center;
+            caption-side: top;
+        }
+        thead {
+            tr {
+                text-align: center;
+                th {
+                    padding: 10px;
+                    background-color: $skyBlue;
+                    color: #fff;
+                    border-left: 1px solid $hardGrey;
+                    border-right: 1px solid $hardGrey;
+                    &:first-child {
+                        border-left: none;
+                    }
+                    &:last-child {
+                        border-right: none;
+                    }
+                }
+            }
+        }
+        tbody {
+            tr {
+                &:nth-child(odd) {
+                    background-color: #fff;
+                }
+                &:nth-child(even) {
+                    background-color: #ddd;
+                }
+                &:last-child {
+                    border-radius: 0 0 $borderRadius $borderRadius;
+                    td {
+                        border-bottom: none;
+                    }
+                }
+                td {
+                    padding: 5px 10px;
+                    text-align: center;
+                    border: 1px solid $hardGrey;
+                    &:last-child {
+                        border-right: none;
+                    }
+                    &:first-child {
+                        border-left: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+section.computer {
+    background-color: #fff;
+    > .row {
+        margin: 0;
+        > div {
+            &:first-child {
+                .table-wrapper {
+                    padding: 0 65px;
+                    table#program {
+                        tbody {
+                            tr {
+                                @include flex(row, flex-start);
+                                padding-left: calc(50% - 83px);
+                                border-top: 1px solid $hardGrey;
+                                &:last-child {
+                                    border-bottom: none;
+                                }
+                                td {
+                                    border: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(2) {
+                .wrapper {
+                    padding: 47px 25px;
+                    .tab-header {
+                        ul {
+                            @include flex(row, flex-start, center);
+                            border-bottom: 1px solid $hardGrey;
+                            li {
+                                padding: 10px 20px;
+                                flex: 0 0 50%;
+                                text-align: center;
+                                @include transition;
+                                &:hover, &.active {
+                                    background-color: $skyBlue;
+                                    color: #fff;
+                                    border-radius: $borderRadius $borderRadius 0 0;
+                                    border: 1px solid $hardGrey;
+                                    border-bottom: none;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
+                    }
+                    .tab-content-wrapper {
+                        .registers {
+                            ul {
+                                @include flex(row, space-evenly, center);
+                                flex-wrap: wrap;
+                                li {
+                                    margin: 10px;
+                                    flex: 0 0 30%;
+                                    &#text {
+                                        flex: 0 0 96%;
+                                        label {
+                                            width: 50px;
+                                        }
+                                        input {
+                                            width: 91%;
+                                        }
+                                    }
+                                    @include flex(row, space-between, center);
+                                    label {
+                                        font-weight: 700;
+                                        margin: 0;
+                                    }
+                                    input[type=text] {
+                                        padding: 5px;
+                                        text-align: center;
+                                        border-radius: $borderRadius;
+                                        border: 2px solid $hardGrey;
+                                        &:not(#textRegister) {
+                                            width: 70%;
+                                        }
+                                    }
+                                }
+                            }
+                            .btn-sec {
+                                @include flex(row, space-evenly, center);
+                                flex-wrap: wrap;
+                                button {
+                                    border: 1px solid $skyBlue;
+                                    background-color: $skyBlue;
+                                    @include transition;
+                                    border-radius: $borderRadius;
+                                    padding: 5px;
+                                    margin: 5px 0;
+                                    width: 150px;
+                                    color: #fff;
+                                    &:hover {
+                                        background-color: $darkBlue;
+                                        border-color: $darkBlue;
+                                    }
+                                }
+                            }
+                        }
+                        .used-memory {
+                            .title {
+                                font-size: 1.5em;
+                                font-weight: 700;
+                                text-align: center;
+                                color: #000;
+                                margin: 0 0 -20px 0;
+                                border-top: 1px solid $hardGrey;
+                                padding: 40px 0 0 0;
+                            }
+                        }
+                        .used-memory, #memoryContent {
+                            .table-wrapper {
+                                padding: 0 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.indirect {
+    &::before {
+        content: "I";
+        font-size: 1em;
+        color: #08256a;
+        font-family: cursive;
+        position: relative;
+        left: -30px;
+    }
+}
+
+footer {
+    background-color: #ddd;
+    height: 30vh;
+    @include flex(column, center, center);
+    p {
+        text-align: center;
+        font-size: 0.8em;
+        font-weight: 700;
+    }
+}

@@ -1,0 +1,17 @@
+$borderRadius: 5px;
+$mainBackground: #F0F0F0;
+$hardGrey: #7C7C7C;
+$darkBlue: #23425F;
+$skyBlue: #0F86C2;
+$textColor: #777777;
+
+@mixin transition {
+    transition: 0.3s all ease;
+}
+
+@mixin flex($dir: row, $jus: center, $al: center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $jus;
+    align-items: $al;
+}

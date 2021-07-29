@@ -1,0 +1,11 @@
+	 ORG 100
+	 LDA BBB //load bb
+	 CMA
+	 INC
+	 ADD AAA
+	 STA CCC
+	 HLT
+AAA, DEC 83
+BBB, DEC -23
+CCC, HEX 0
+	 END
