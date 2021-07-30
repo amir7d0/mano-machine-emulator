@@ -1,12 +1,20 @@
 # mano-machine-emulator
 
-### running instruction
+### Usage
+
+##### Developement mode 
+
+`npm install` to install dependencies
+
+`npm install -g nodemon` to install nodemon package
+
+`npm run dev` to run program in dev environment 
+
+##### Production mode
 
 `npm install` to install dependencies
 
 `npm start` to start the program
-
-`npm run dev` to run program in dev environment ( You should install nodemon first )
 
 ## Authors
 [Mostafa Mojtahedi](https://github.com/mostafa1647)
