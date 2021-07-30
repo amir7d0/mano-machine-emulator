@@ -3,12 +3,13 @@ const router = express.Router();
 
 const controller = require("../controllers/controller");
 
-/* GET home page. */
-// router.get('/', function(req, res, next) {
-//   res.render('index', { title: 'Express' });
-// });
-
 router.route("/")
     .post(controller.runComputer)
+
+router.route("*")
+    .get(controller.notFound)
+    .post(controller.notFound)
+    .put(controller.notFound)
+    .delete(controller.notFound)
 
 module.exports = router;

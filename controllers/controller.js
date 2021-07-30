@@ -1,5 +1,6 @@
 const fs = require("fs");
 const { exec } = require('child_process');
+const { NOTFOUND } = require("dns");
 
 module.exports = {
     async runComputer(req, res) {
@@ -35,6 +36,11 @@ module.exports = {
                 message: e.message
             })
         }
-    }
+    },
 
+    notFound(req, res) {
+        res.status(404).json({
+            status: "not found"
+        })
+    }
 }
