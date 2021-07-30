@@ -17,4 +17,8 @@ app.use(cors());
 
 app.use('/', indexRouter);
 
+app.use("*", (req, res) => {
+    res.status(404).sendFile("./public/file.html", { root: __dirname });
+})
+
 module.exports = app;
